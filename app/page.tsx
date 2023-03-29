@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Fact from "@/components/Fact";
 import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
+import SkillSet from "@/components/Skill";
 
 
 export default function Homepage() {
@@ -13,6 +14,7 @@ export default function Homepage() {
       </header>
       <About/>
       <Fact/>
+      <SkillSet/>
     </div>
   );
 }
