@@ -16,7 +16,6 @@ export default function SkillSet() {
         {/* @ts-ignore */}
         <SimpleGrid minChildWidth="250px" spacing={1}>
           {skills.names.map((item, i) => {
-            const myRef = document.querySelector('.scrollable-div');
             return (
               <Box key={i} alignItems="center">
                 <Flex className=" -mb-4" color='#9DE4C4'>
@@ -39,7 +38,6 @@ export default function SkillSet() {
                     excellent: '#2563EB',
                     poor: 'red',
                   }}
-                  scrollArea={myRef}
                 />
               </Box>
             );
