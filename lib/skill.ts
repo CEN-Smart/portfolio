@@ -11,13 +11,14 @@ import {
 import { TbBrandNextjs } from "react-icons/tb";
 import { BsGit } from "react-icons/bs";
 import { IconType } from "react-icons";
+
 type Skills={
   skill: string;
   detail: string;
   names: {
     icon: IconType,
     name: string;
-    level: string;
+    level: number;
   }[];
 }
 export const skills:Skills = {
@@ -25,15 +26,15 @@ export const skills:Skills = {
   detail:
     "These are the sets of skills i have acquired over the years and still counting. Learning and advancing on my skills is what i have engaged over time.",
   names: [
-    { icon: ImHtmlFive2, name: "HTML", level: '90' },
-    { icon: TiCss3, name: "CSS", level: '90' },
-    { icon: SiTailwindcss, name: "TAILWINDCSS", level: '85' },
-    { icon: SiChakraui, name: "CHAKRA-UI", level: '85' },
-    { icon: SiJavascript, name: "JAVASCRIPT", level: '70' },
-    { icon: SiTypescript, name: "TYPESCRIPT", level: '70' },
-    { icon: SiGraphql, name: "GRAPHQL", level: '70' },
-    { icon: SiReact, name: "REACT", level: '70' },
-    { icon: TbBrandNextjs, name: "NEXT JS", level: '75' },
-    { icon: BsGit, name: "GIT AND GITHUB", level: '80' },
+    { icon: ImHtmlFive2, name: "HTML", level: 90 },
+    { icon: TiCss3, name: "CSS", level: 90 },
+    { icon: SiTailwindcss, name: "TAILWINDCSS", level: 85 },
+    { icon: SiChakraui, name: "CHAKRA-UI", level: 85 },
+    { icon: SiJavascript, name: "JAVASCRIPT", level: 70 },
+    { icon: SiTypescript, name: "TYPESCRIPT", level: 70 },
+    { icon: SiGraphql, name: "GRAPHQL", level: 70},
+    { icon: SiReact, name: "REACT", level: 70},
+    { icon: TbBrandNextjs, name: "NEXT JS", level: 75},
+    { icon: BsGit, name: "GIT AND GITHUB", level: 80 },
   ],
 };

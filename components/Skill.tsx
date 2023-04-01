@@ -1,49 +1,44 @@
 "use client";
 import { skills } from "@/lib/skill";
-import { Box, Flex, SimpleGrid } from "@chakra-ui/react";
-// @ts-ignore
-import ProgressBar from "react-animated-progress-bar";
-
+import { Box, Flex, SimpleGrid, Progress } from "@chakra-ui/react";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from "framer-motion";
+import { useRef } from "react";
 export default function SkillSet() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: false });
   return (
-    <main className=" text-md bg-black/95 py-20 text-slate-100 grid place-items-center">
-      <div className=" mx-auto w-[90%] lg:w-[70%]">
-        <p className="relative mx-auto w-36 border-b py-4 text-center text-4xl font-[700] text-emerald-300">
+    <main className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
+      <motion.div style={{
+          transform: isInView ? "none" : "translateY(200px)",
+          opacity: isInView ? 1 : 0,
+          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
+        }} className=" mx-auto w-[90%] lg:w-[70%]">
+        <p className="relative mx-auto w-36 border-b py-2 text-center text-4xl font-[700] text-emerald-300">
           {skills.skill}
           <span className=" absolute -bottom-[0.14rem] left-[35%] h-[0.2rem] w-12 bg-blue-600"></span>
         </p>
-        <p className="mt-4 mb-8 pb-4 lg:text-center">{skills.detail}</p>
+        <p className="mt-2 pb-4 lg:mx-auto">{skills.detail}</p>
         {/* @ts-ignore */}
-        <SimpleGrid minChildWidth="250px" spacing={1}>
+        <SimpleGrid minChildWidth="250px" spacing={5}>
           {skills.names.map((item, i) => {
             return (
-              <Box key={i} alignItems="center">
-                <Flex className=" -mb-4" color='#9DE4C4'>
+              <Box key={i} alignItems="center" ref={ref}>
+                <Flex className=" justify-between" color="#9DE4C4">
                   <item.icon className="text-2xl" />
-                  <p className="ml-2">{item.name}</p>
+                  <p className="">{item.name}</p>
                 </Flex>
-                <ProgressBar
-                  width="100%"
-                  height="10px"
-                  rect
-                  fontColor="#9DE4C4"
-                  percentage={item.level}
-                  rectPadding="1px"
-                  rectBorderRadius="20px"
-                  trackPathColor="transparent"
-                  trackBorderColor="grey"
-                  defColor={{
-                    fair: 'orangered',
-                    good: 'yellow',
-                    excellent: '#2563EB',
-                    poor: 'red',
-                  }}
-                />
+                <Progress className=" w-full" as={motion.div} isAnimated hasStripe min={0} max={100} value={isInView ? item.level:0} />
               </Box>
             );
           })}
         </SimpleGrid>
-      </div>
+      </motion.div>
     </main>
   );
 }
