@@ -2,6 +2,7 @@ import About from "@/components/About";
 import Fact from "@/components/Fact";
 import Navbar from "@/components/Navbar";
 import Profile from "@/components/Profile";
+import Resume from "@/components/Resume";
 import SkillSet from "@/components/Skill";
 
 
@@ -15,6 +16,7 @@ export default function Homepage() {
       <About/>
       <Fact/>
       <SkillSet/>
+      <Resume/>
     </div>
   );
 }
