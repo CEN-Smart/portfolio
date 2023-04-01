@@ -10,7 +10,7 @@ import React, { useRef } from 'react';
 
 export default function Biography() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <main className=' bg-black/95 grid place-items-center ' ref={ref}>
       <motion.div className=' text-md text-slate-200 p-1 max-w-[90%] lg:max-w-[70%] mt-20' style={{
@@ -18,7 +18,7 @@ export default function Biography() {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
-        <p className='mx-auto text-center text-4xl font-[700] py-4 border-b w-36 relative text-emerald-300'>
+        <p className='mx-auto text-center text-4xl font-[700] py-2 border-b w-36 relative text-emerald-300'>
           {bio.about}
           <span className=' absolute -bottom-[0.14rem] left-[35%] w-12 bg-blue-600 h-[0.2rem]'></span>
         </p>

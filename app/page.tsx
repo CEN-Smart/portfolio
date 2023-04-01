@@ -8,7 +8,7 @@ import SkillSet from "@/components/Skill";
 export default function Homepage() {
   return (
     <div>
-      <header className='bg-img h-screen relative w-full'>
+      <header className='bg-img h-screen relative w-full overflow-y-hidden'>
       <Navbar />
       <Profile />
       </header>

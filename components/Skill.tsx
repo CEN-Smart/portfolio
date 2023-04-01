@@ -11,7 +11,7 @@ import {
 import { useRef } from "react";
 export default function SkillSet() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <main className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
       <motion.div style={{
@@ -33,7 +33,7 @@ export default function SkillSet() {
                   <item.icon className="text-2xl" />
                   <p className="">{item.name}</p>
                 </Flex>
-                <Progress className=" w-full" as={motion.div} isAnimated hasStripe min={0} max={100} value={isInView ? item.level:0} />
+                <Progress className=" w-full" as={motion.div} isAnimated hasStripe min={0} max={100} value={item.level} />
               </Box>
             );
           })}

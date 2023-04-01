@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 
 export default function Fact() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: false });
+  const isInView = useInView(ref, { once: true });
   return (
     <main className=' bg-black/95 text-slate-100 text-md py-20' ref={ref}>
       <motion.div className=' w-[90%] lg:w-[70%] mx-auto'  style={{
@@ -16,7 +16,7 @@ export default function Fact() {
           opacity: isInView ? 1 : 0,
           transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
         }}>
-       <p className='mx-auto text-center text-4xl font-[700] py-4 border-b w-36 relative text-emerald-300'>
+       <p className='mx-auto text-center text-4xl font-[700] py-2 border-b w-36 relative text-emerald-300'>
           {facts.fact}
           <span className=' absolute -bottom-[0.14rem] left-[35%] w-12 bg-blue-600 h-[0.2rem]'></span>
         </p>
