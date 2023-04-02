@@ -23,8 +23,8 @@ export default function Biography() {
           <span className=' absolute -bottom-[0.14rem] left-[35%] w-12 bg-blue-600 h-[0.2rem]'></span>
         </p>
         <div>
-          <p className='mt-4 mb-8'>{bio.who}</p>
-          <Box className="xl:flex gap-10 items-start space-y-8">
+          <p className='text-justify mt-4 mb-8'>{bio.who}</p>
+          <Box className="xl:flex gap-10 items-start space-y-8 text-justify">
             <Box flexShrink={0} className="relative h-80 w-80 ">
               <Image
                 priority

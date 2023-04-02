@@ -1,5 +1,7 @@
+
 'use client';
 import { resume } from "@/lib/resume";
+import { Divider, Flex, Stack } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
@@ -17,7 +19,7 @@ export default function Resume() {
         {resume.name}
         <span className=" absolute -bottom-[0.14rem] left-[35%] h-[0.2rem] w-12 bg-blue-600"></span>
       </p>
-      <p className="mt-4 pb-4 lg:mx-auto">{resume.detail}</p>
+      <p className="text-justify mt-4 pb-4 lg:mx-auto">{resume.detail}</p>
      
     </motion.div>
   </main>

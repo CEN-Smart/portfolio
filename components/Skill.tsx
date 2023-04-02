@@ -23,7 +23,7 @@ export default function SkillSet() {
           {skills.skill}
           <span className=" absolute -bottom-[0.14rem] left-[35%] h-[0.2rem] w-12 bg-blue-600"></span>
         </p>
-        <p className="mt-4 pb-4 lg:mx-auto">{skills.detail}</p>
+        <p className="text-justify mt-4 pb-4 lg:mx-auto">{skills.detail}</p>
         {/* @ts-ignore */}
         <SimpleGrid minChildWidth={{
           base: "250px",
