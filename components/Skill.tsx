@@ -3,9 +3,6 @@ import { skills } from "@/lib/skill";
 import { Box, Flex, SimpleGrid, Progress } from "@chakra-ui/react";
 import {
   motion,
-  useMotionValue,
-  useTransform,
-  animate,
   useInView,
 } from "framer-motion";
 import { useRef } from "react";

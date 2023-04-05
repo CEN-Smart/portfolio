@@ -4,12 +4,16 @@ import { TypeAnimation } from "react-type-animation";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
 import { useRef } from "react";
+import Navbar from "./Navbar";
+import Desktop from "./Desktop";
 export default function Profile() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   return (
-    <div className="grid h-screen place-items-center p-8" ref={ref}>
-      <div className="text-center lg:text-left">
+    <div className="grid bg-img w-full h-screen place-items-center p-8 relative" ref={ref}>
+      <Navbar/>
+      <Desktop/>
+      <div className="text-center p-32 lg:text-left">
         <motion.h1
           
           className="mb-3 text-4xl font-bold text-slate-400 lg:text-6xl"

@@ -1,6 +1,6 @@
 import About from "@/components/About";
 import Fact from "@/components/Fact";
-import Navbar from "@/components/Navbar";
+import Portfolio from "@/components/Portfolio";
 import Profile from "@/components/Profile";
 import Resume from "@/components/Resume";
 import SkillSet from "@/components/Skill";
@@ -8,15 +8,13 @@ import SkillSet from "@/components/Skill";
 
 export default function Homepage() {
   return (
-    <div>
-      <header className='bg-img h-screen relative w-full overflow-y-hidden'>
-      <Navbar />
+    <main>
       <Profile />
-      </header>
       <About/>
       <Fact/>
       <SkillSet/>
       <Resume/>
-    </div>
+      <Portfolio/>
+    </main>
   );
 }

@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html className=' overflow-x-hidden'>
       
-      <body className={`${inter.variable} font-sans antialiased overflow-hidden`}>
+      <body className={`${inter.variable} font-sans antialiased overflow-hidden relative`}>
        <Providers>
         {children}
        </Providers>
