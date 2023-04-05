@@ -31,10 +31,30 @@ export default function Portfolio() {
         {/* @ts-ignore */}
       <Tabs isFitted variant="enclosed" className="mt-10">
         <TabList className=" flex justify-center flex-wrap">
-          <Tab>ALL</Tab>
-          <Tab>COMPONENTS</Tab>
-          <Tab>LANDING PAGES</Tab>
-          <Tab>WEBSITES</Tab>
+          <Tab fontSize={{
+            base: "10px",
+            md: "sm",
+            lg: "md",
+            
+          }}>ALL</Tab>
+          <Tab fontSize={{
+            base: "10px",
+            md: "sm",
+            lg: "md",
+            
+          }}>COMPONENTS</Tab>
+          <Tab fontSize={{
+            base: "10px",
+            md: "sm",
+            lg: "md",
+            
+          }}>LANDING PAGES</Tab>
+          <Tab fontSize={{
+            base: "10px",
+            md: "sm",
+            lg: "md",
+            
+          }}>WEBSITES</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
