@@ -13,7 +13,7 @@ export default function Profile() {
     <div className="grid bg-img w-full h-screen place-items-center p-8 relative" ref={ref}>
       <Navbar/>
       <Desktop/>
-      <div className="text-center p-32 lg:text-left">
+      <div className="text-center p-0 lg:p-32 lg:text-left">
         <motion.h1
           
           className="mb-3 text-4xl font-bold text-slate-400 lg:text-6xl"

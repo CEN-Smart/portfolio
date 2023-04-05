@@ -11,7 +11,7 @@ import Link from 'next/link';
 export default function Desktop() {
   const pathname = usePathname()
   return (
-    <nav className="fixed top-1/2 -translate-y-1/2 left-3 transition-all duration-300 invisible lg:visible flex flex-col">
+    <nav className="lg:fixed top-1/2 lg:-translate-y-1/2 lg:left-3 transition-all duration-300 lg:visible lg:flex lg:flex-col hidden">
       {menu &&
         menu.map((item, i) => {
           return (
