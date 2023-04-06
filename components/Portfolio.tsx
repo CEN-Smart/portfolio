@@ -1,8 +1,18 @@
 "use client";
+// Image imports
+import website1 from "../public/portfolio/site--1.png";
+import comp1 from "../public/portfolio/comp--1.png";
+import comp2 from "../public/portfolio/comp--2.png";
+import comp3 from "../public/portfolio/comp--3.png";
+import comp4 from "../public/portfolio/comp--4.png";
+import land1 from "../public/portfolio/land--1.png";
+import land2 from "../public/portfolio/land--2.png";
+const portfolioImg = [website1, comp1, comp2, comp3, comp4, land1, land2];
 import { portfolio} from "@/lib/portfolio";
-import { Box, Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Box, Tabs, TabList, TabPanels, Tab, TabPanel, SimpleGrid } from "@chakra-ui/react";
 import { motion, useInView } from "framer-motion";
 import React, { useRef } from "react";
+import Image from "next/image";
 
 export default function Portfolio() {
   const ref = useRef(null);
@@ -36,7 +46,9 @@ export default function Portfolio() {
             md: "sm",
             lg: "md",
             
-          }}>ALL</Tab>
+          }}>
+           ALL
+          </Tab>
           <Tab fontSize={{
             base: "10px",
             md: "sm",
@@ -58,7 +70,13 @@ export default function Portfolio() {
         </TabList>
         <TabPanels>
           <TabPanel>
-            <p>one!</p>
+          <SimpleGrid minChildWidth='300px' spacing={10}>
+              {portfolioImg.map((img,i)=>{return (
+                <Box key={i} className="relative">
+                  <Image src={img} alt="portfolio" fill />
+                </Box>
+              )})}
+            </SimpleGrid>
           </TabPanel>
           <TabPanel>
             <p>two!</p>
