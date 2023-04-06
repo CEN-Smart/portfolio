@@ -24,9 +24,9 @@ export default function Navbar() {
   return (
     <>
     {/* @ts-ignore */}
-     <Icon color='blue.200' ref={btnRef} onClick={onOpen} as={GiHamburgerMenu} className={clsx('fixed lg:hidden right-6 top-6 z-10 cursor-pointer text-3xl font-bold',{'hidden':isOpen})}  />
+     <Icon display={{base:isOpen?'none':'block',  xl:'none',}} color='blue.200' ref={btnRef} onClick={onOpen} as={GiHamburgerMenu} className={clsx('fixed right-6 top-6 z-10 cursor-pointer text-3xl font-bold')}  />
    
-   <Hide above='lg'>
+   <Hide above='xl'>
      <Drawer size='xs' isOpen={isOpen}
         placement='left'
         onClose={onClose}
