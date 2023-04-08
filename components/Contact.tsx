@@ -16,7 +16,7 @@ import { useToast } from "@chakra-ui/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { contacts } from "@/lib/contact";
-export default function Services() {
+export default function Contact() {
   const toast = useToast();
   function onToast() {
     toast({
@@ -39,7 +39,7 @@ export default function Services() {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <main id="#contact" className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
+    <main  className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
       <div data-aos="zoom-in-up" className=" mx-auto w-[90%] lg:w-[70%]">
         <p className="relative mx-auto w-fit border-b py-4 text-center text-4xl font-[700] text-emerald-300">
           {contacts.contact}
@@ -67,10 +67,10 @@ export default function Services() {
             {contacts.contactdetails.map((item, i) => {
               return (
                 <Flex key={i} alignItems="flex-start" gap={4} className="group">
-                  <Box className=" grid h-10 w-10 place-items-center rounded-full bg-slate-50 transition-all duration-300 group-hover:bg-blue-600">
+                  <Box className=" flex-shrink-0 grid h-10 w-10 place-items-center rounded-full bg-slate-50 transition-all duration-300 group-hover:bg-blue-600">
                     <item.icon className="text-lg text-blue-600  transition-all duration-300 group-hover:text-slate-50" />
                   </Box>
-                  <Text>
+                  <Text className=" whitespace-normal">
                     <strong className=" text-xl">{item.detail} </strong> <br />
                     {item.description}
                   </Text>
