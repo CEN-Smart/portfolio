@@ -4,21 +4,20 @@ import { bio } from '@/lib/biography';
 import {
   Box,
 } from '@chakra-ui/react';
-import { motion, useInView } from 'framer-motion';
+import { useEffect } from 'react';
 import Image from "next/legacy/image";
-import React, { useRef } from 'react';
+// @ts-ignore
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Biography() {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  useEffect(() => {
+    AOS.init({duration:1200});
+  }, [])
   return (
-    <main className=' bg-black/95 grid place-items-center ' ref={ref}>
-      <motion.div className=' text-md text-slate-200 p-1 max-w-[90%] lg:max-w-[70%] mt-20' style={{
-          transform: isInView ? "none" : "translateY(200px)",
-          opacity: isInView ? 1 : 0,
-          transition: "all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s"
-        }}>
-        <p className='mx-auto text-center text-4xl font-[700] py-4 border-b w-36 relative text-emerald-300'>
+    <main className=' bg-black/95 grid place-items-center'>
+      <div data-aos="zoom-in-up" className=' text-md text-slate-200 p-1 max-w-[90%] lg:max-w-[70%] mt-12'>
+        <p className='mx-auto text-center text-4xl font-[700] py-4 border-b w-fit relative text-emerald-300'>
           {bio.about}
           <span className=' absolute -bottom-[0.14rem] left-[35%] w-12 bg-blue-600 h-[0.2rem]'></span>
         </p>
@@ -87,7 +86,7 @@ export default function Biography() {
           </Box>
           
         </div>
-      </motion.div>
+      </div>
     </main>
   );
 }

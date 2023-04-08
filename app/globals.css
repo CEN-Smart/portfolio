@@ -6,6 +6,9 @@
   .cards{
     @apply relative ml-[1.8rem] mb-10 flex transform cursor-pointer flex-col items-center space-y-4 rounded bg-gray-800 px-6 py-4 text-white transition hover:-translate-y-2 md:flex-row md:space-y-0 shadow-2xl
   }
+  .border-hover{
+    @apply  opacity-0 invisible transition-all duration-500 group-hover:opacity-100 group-hover:visible h-14 w-14 absolute border-slate-900 z-10
+  }
 }
 
 @layer component {
@@ -47,5 +50,6 @@
     @apply w-10 h-1 bg-blue-300 absolute -left-10 z-0
   }
  
+  
  
 }
