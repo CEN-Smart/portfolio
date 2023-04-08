@@ -13,7 +13,7 @@ export default function Footer() {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <Center className=" text-md border-t-2 border-gray-800 bg-black/95 py-10 text-slate-100 pb-28">
+    <Center className=" text-md border-t-2 border-gray-800 bg-black/95 py-10 text-slate-100 pb-28 px-8">
       {/* @ts-ignore */}
       <Stack data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
