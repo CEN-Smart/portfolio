@@ -14,32 +14,32 @@ const projects = [
   },
   {
     name: "Component 1",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://reusable-form-neon.vercel.app/",
     path: compOne,
   },
   {
     name: "Component 2",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://smart-parctice-of-grid-and-flex-with-responsiveness-yr6v.vercel.app/",
     path: compTwo,
   },
   {
     name: "Component 3",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://static-todo-list.vercel.app/",
     path: compThree,
   },
   {
     name: "Component 4",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://capstone-project-1.vercel.app/",
     path: compFour,
   },
   {
     name: "LandingPage 1",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://vidapp-omega.vercel.app/",
     path: landOne,
   },
   {
     name: "LandingPage 2",
-    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    link: "https://btc-site-cen-smart.vercel.app/",
     path: landTwo,
   },
 ];
