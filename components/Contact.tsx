@@ -1,7 +1,6 @@
 "use client";
 import {
   Box,
-  Button,
   Flex,
   FormControl,
   FormHelperText,
@@ -10,6 +9,7 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
+export const ID = "contact";
 import { useEffect } from "react";
 import { useToast } from "@chakra-ui/react";
 // @ts-ignore
@@ -39,7 +39,7 @@ export default function Contact() {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <main  className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
+    <main id={ID}  className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
       <div data-aos="zoom-in-up" className=" mx-auto w-[90%] lg:w-[70%]">
         <p className="relative mx-auto w-fit border-b py-4 text-center text-4xl font-[700] text-emerald-300">
           {contacts.contact}

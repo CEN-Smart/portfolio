@@ -1,9 +1,52 @@
 "use client";
-
+import siteOne from "@/../public/site--1.png";
+import compOne from "@/../public/comp--1.png";
+import compTwo from "@/../public/comp--2.png";
+import compThree from "@/../public/comp--3.png";
+import compFour from "@/../public/comp--4.png";
+import landOne from "@/../public/land--1.png";
+import landTwo from "@/../public/land--2.png";
+const projects = [
+  {
+    name: "Website 1",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: siteOne,
+  },
+  {
+    name: "Component 1",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: compOne,
+  },
+  {
+    name: "Component 2",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: compTwo,
+  },
+  {
+    name: "Component 3",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: compThree,
+  },
+  {
+    name: "Component 4",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: compFour,
+  },
+  {
+    name: "LandingPage 1",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: landOne,
+  },
+  {
+    name: "LandingPage 2",
+    link: "https://portfolio-git-master-cen-smart.vercel.app/",
+    path: landTwo,
+  },
+];
 import { portfolio } from "@/lib/portfolio";
 // @ts-ignore
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import "aos/dist/aos.css";
 import {
   Text,
   Box,
@@ -22,11 +65,10 @@ import { ExternalLinkIcon } from "@chakra-ui/icons";
 
 export default function Portfolio() {
   useEffect(() => {
-    AOS.init({duration:1200});
-  }, [])
+    AOS.init({ duration: 1200 });
+  }, []);
   return (
-    <Box 
-      className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
+    <Box className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
       <Box data-aos="zoom-in-up" className=" mx-auto w-[90%] lg:w-[70%]">
         <p className="relative mx-auto w-fit border-b py-4 text-center text-4xl font-[700] text-emerald-300">
           {portfolio.portfolio}
@@ -37,7 +79,8 @@ export default function Portfolio() {
         </p>
         {/* @ts-ignore */}
         <Tabs variant="unstyled" className="mt-10">
-          <TabList data-aos="zoom-in-up"
+          <TabList
+            data-aos="zoom-in-up"
             display="flex"
             justifyContent="center"
             alignItems="center"
@@ -75,11 +118,15 @@ export default function Portfolio() {
           </TabList>
           <TabPanels>
             {/* 1st Tab Panel */}
-            <TabPanel >
-              <SimpleGrid templateColumns='repeat(auto-fill, minmax(300px, 1fr))' spacing={5}>
-                {portfolio.projects.map((path, i) => {
+            <TabPanel>
+              <SimpleGrid
+                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                spacing={5}
+              >
+                {projects.map((path, i) => {
                   return (
-                    <Link data-aos="zoom-in-up"
+                    <Link
+                      data-aos="zoom-in-up"
                       className="group relative  overflow-hidden rounded"
                       href={path.link}
                       isExternal
@@ -98,7 +145,7 @@ export default function Portfolio() {
                         mx="4px"
                         className=" absolute right-1 top-1 z-20"
                       />
-                      <Image 
+                      <Image
                         src={path.path}
                         className="absolute"
                         alt="Portfolio Image"
@@ -112,10 +159,14 @@ export default function Portfolio() {
             </TabPanel>
             {/* 2nd Tab Panel */}
             <TabPanel>
-              <SimpleGrid templateColumns='repeat(auto-fill, minmax(300px, 1fr))' spacing={5}>
-                {portfolio.projects.slice(1, 5).map((path, i) => {
+              <SimpleGrid
+                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                spacing={5}
+              >
+                {projects.slice(1, 5).map((path, i) => {
                   return (
-                    <Link data-aos="zoom-in-up"
+                    <Link
+                      data-aos="zoom-in-up"
                       className="group relative  overflow-hidden rounded"
                       href={path.link}
                       isExternal
@@ -148,10 +199,14 @@ export default function Portfolio() {
             </TabPanel>
             {/* 3rd Tab Panel */}
             <TabPanel>
-              <SimpleGrid templateColumns='repeat(auto-fill, minmax(300px, 1fr))' spacing={5}>
-                {portfolio.projects.slice(-2).map((path, i) => {
+              <SimpleGrid
+                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                spacing={5}
+              >
+                {projects.slice(-2).map((path, i) => {
                   return (
-                    <Link data-aos="zoom-in-up"
+                    <Link
+                      data-aos="zoom-in-up"
                       className="group relative  overflow-hidden rounded"
                       href={path.link}
                       isExternal
@@ -184,15 +239,19 @@ export default function Portfolio() {
             </TabPanel>
             {/* 4th Tab Panel */}
             <TabPanel>
-              <SimpleGrid templateColumns='repeat(auto-fill, minmax(300px, 1fr))' spacing={5}>
-                {portfolio.projects.slice(0, 1).map((path, i) => {
+              <SimpleGrid
+                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                spacing={5}
+              >
+                {projects.slice(0, 1).map((path, i) => {
                   return (
-                    <Link data-aos="zoom-in-up"
+                    <Link
+                      data-aos="zoom-in-up"
                       className="group relative  overflow-hidden rounded"
                       href={path.link}
                       isExternal
                       key={i}
-                      width='100%'
+                      width="100%"
                       height={{ base: "300px", md: "350px", lg: "300px" }}
                       position="relative"
                     >
