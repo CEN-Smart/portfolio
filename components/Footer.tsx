@@ -13,11 +13,11 @@ export default function Footer() {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <Center className=" text-md border-t-2 border-gray-800 bg-black/95 py-10 text-slate-100 pb-28 px-8">
+    <Center className=" text-md border-t-2 border-gray-800 bg-black/95 py-10 text-slate-100 pb-20">
       {/* @ts-ignore */}
       <Stack data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
-     data-aos-duration="2000" className="text-center text-slate-400">
+     data-aos-duration="2000" className="text-center  w-[90%] lg:w-[70%] text-slate-400">
         <Heading as="h3" size="xl" className="font-bold text-slate-400">
           {footer.name}
         </Heading>

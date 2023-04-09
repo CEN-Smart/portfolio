@@ -5,6 +5,9 @@ const styles = {
   paddingLeft: "2px",
   paddingRight: "2px",
 };
+type PageProps={
+  children: React.ReactNode
+}
 // 1. Import the utilities
 import { extendTheme } from "@chakra-ui/react";
 
@@ -20,7 +23,7 @@ const breakpoints = {
 
 // 3. Extend the theme
 const theme = extendTheme({ breakpoints });
-export default function Providers({ children }: { children: React.ReactNode }) {
+export default function Providers({ children }: PageProps) {
   return (
     <html>
       <body>

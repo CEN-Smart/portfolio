@@ -21,11 +21,12 @@ export const metadata: Metadata = {
     },
   },
 };
+type PageProps={
+  children: React.ReactNode
+}
 export default function RootLayout({
   children,
-}: {
-  children: React.ReactNode;
-}) {
+}: PageProps) {
   return (
     <html lang="en" className=" overflow-x-hidden scroll-smooth">
       <body

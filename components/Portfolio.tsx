@@ -89,27 +89,47 @@ export default function Portfolio() {
             fontWeight="600"
             bgColor="#fff"
             w="fit-content"
-            className="mx-auto rounded-full"
+            className="mx-auto mb-4 rounded-full"
           >
             <Tab
+              fontSize={{
+                base: "sm",
+                md: "md",
+                lg: "lg",
+              }}
               _selected={{ color: "blue.500" }}
               _hover={{ color: "blue.500" }}
             >
               ALL
             </Tab>
             <Tab
+              fontSize={{
+                base: "sm",
+                md: "md",
+                lg: "lg",
+              }}
               _selected={{ color: "blue.500" }}
               _hover={{ color: "blue.500" }}
             >
               COMPONENTS
             </Tab>
             <Tab
+              fontSize={{
+                base: "sm",
+                md: "md",
+                lg: "lg",
+              }}
               _selected={{ color: "blue.500" }}
               _hover={{ color: "blue.500" }}
             >
               LANDING PAGES
             </Tab>
             <Tab
+              fontSize={{
+                base: "sm",
+                md: "md",
+                lg: "lg",
+              }}
               _selected={{ color: "blue.500" }}
               _hover={{ color: "blue.500" }}
             >
@@ -120,7 +140,7 @@ export default function Portfolio() {
             {/* 1st Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
                 spacing={5}
               >
                 {projects.map((path, i) => {
@@ -146,8 +166,8 @@ export default function Portfolio() {
                         className=" absolute right-1 top-1 z-20"
                       />
                       <Image
-                        src={path.path}
                         className="absolute"
+                        src={path.path}
                         alt="Portfolio Image"
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -160,7 +180,7 @@ export default function Portfolio() {
             {/* 2nd Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(1, 5).map((path, i) => {
@@ -200,7 +220,7 @@ export default function Portfolio() {
             {/* 3rd Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(-2).map((path, i) => {
@@ -240,7 +260,7 @@ export default function Portfolio() {
             {/* 4th Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fill, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(0, 1).map((path, i) => {
