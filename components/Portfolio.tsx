@@ -93,7 +93,7 @@ export default function Portfolio() {
           >
             <Tab
               fontSize={{
-                base: "sm",
+                base: "8px",
                 md: "md",
                 lg: "lg",
               }}
@@ -104,7 +104,7 @@ export default function Portfolio() {
             </Tab>
             <Tab
               fontSize={{
-                base: "sm",
+                base: "8px",
                 md: "md",
                 lg: "lg",
               }}
@@ -115,7 +115,7 @@ export default function Portfolio() {
             </Tab>
             <Tab
               fontSize={{
-                base: "sm",
+                base: "8px",
                 md: "md",
                 lg: "lg",
               }}
@@ -126,7 +126,7 @@ export default function Portfolio() {
             </Tab>
             <Tab
               fontSize={{
-                base: "sm",
+                base: "8px",
                 md: "md",
                 lg: "lg",
               }}
@@ -140,7 +140,7 @@ export default function Portfolio() {
             {/* 1st Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
                 spacing={5}
               >
                 {projects.map((path, i) => {
@@ -152,7 +152,7 @@ export default function Portfolio() {
                       isExternal
                       key={i}
                       width="100%"
-                      height={{ base: "300px", md: "350px", lg: "300px" }}
+                      height={{ base: "250px", md: "300px", lg: "250px" }}
                       position="relative"
                     >
                       <Text className=" invisible absolute top-0 left-0 z-10   grid h-full w-full place-items-center bg-black/50 text-center text-xl font-bold text-slate-100 opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100">
@@ -180,7 +180,7 @@ export default function Portfolio() {
             {/* 2nd Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(1, 5).map((path, i) => {
@@ -192,7 +192,7 @@ export default function Portfolio() {
                       isExternal
                       key={i}
                       width="100%"
-                      height={{ base: "300px", md: "350px", lg: "300px" }}
+                      height={{ base: "2500px", md: "300px", lg: "250px" }}
                       position="relative"
                     >
                       <Text className=" invisible absolute top-0 left-0 z-10   grid h-full w-full place-items-center bg-black/50 text-center text-xl font-bold text-slate-100 opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100">
@@ -220,7 +220,7 @@ export default function Portfolio() {
             {/* 3rd Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(-2).map((path, i) => {
@@ -232,7 +232,7 @@ export default function Portfolio() {
                       isExternal
                       key={i}
                       width="100%"
-                      height={{ base: "300px", md: "350px", lg: "300px" }}
+                      height={{ base: "250px", md: "300px", lg: "250px" }}
                       position="relative"
                     >
                       <Text className=" invisible absolute top-0 left-0 z-10   grid h-full w-full place-items-center bg-black/50 text-center text-xl font-bold text-slate-100 opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100">
@@ -260,7 +260,7 @@ export default function Portfolio() {
             {/* 4th Tab Panel */}
             <TabPanel>
               <SimpleGrid
-                templateColumns="repeat(auto-fit, minmax(300px, 1fr))"
+                templateColumns="repeat(auto-fit, minmax(250px, 1fr))"
                 spacing={5}
               >
                 {projects.slice(0, 1).map((path, i) => {
@@ -272,7 +272,7 @@ export default function Portfolio() {
                       isExternal
                       key={i}
                       width="100%"
-                      height={{ base: "300px", md: "350px", lg: "300px" }}
+                      height={{ base: "2500px", md: "300px", lg: "250px" }}
                       position="relative"
                     >
                       <Text className=" invisible absolute top-0 left-0 z-10   grid h-full w-full place-items-center bg-black/50 text-center text-xl font-bold text-slate-100 opacity-0 transition-all duration-500 group-hover:visible group-hover:opacity-100">
