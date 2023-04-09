@@ -20,19 +20,20 @@ export default function Services() {
         {/* @ts-ignore */}
         <SimpleGrid
           mt={8}
+          justifyItems='center'
           spacing={8}
-          templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+          templateColumns="repeat(auto-fit, minmax(200px, 1fr))"
         >
           {services.list.map((item, i) => {
             return (
               <Box
                 data-aos="zoom-in-up"
                 key={i}
-                h="350px"
+                w={["200px", "200px", "200px", "200px"]}
                 bgColor="#fff"
-                className="group flex flex-col items-center justify-evenly px-6 py-3 text-center shadow-lg rounded"
+                className="group flex flex-col justify-start items-center space-y-1 p-4 text-center shadow-lg rounded"
               >
-                <Box className=" relative w-20 h-20 grid place-items-center">
+                <Box className=" relative w-14 h-14 grid place-items-center">
                   <item.icon className=" text-3xl group-hover:text-white transition-all duration-500 text-blue-400 z-10" />
                   <svg className="absolute h-full w-full scale-[2] inset-0" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -42,11 +43,11 @@ export default function Services() {
                     />
                   </svg>
                 </Box>
-                <Box>
-                  <Heading color="gray.500" as="h3" size="lg">
+                <Box py={4}>
+                  <Heading color="gray.500" as="h3" size="md">
                     {item.type}
                   </Heading>
-                  <Text className=" mt-5 text-gray-600">
+                  <Text className=" mt-5 text-gray-800">
                     {item.description}
                   </Text>
                 </Box>
