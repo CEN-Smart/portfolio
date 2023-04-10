@@ -9,14 +9,16 @@ import {
   Text,
   Textarea,
 } from "@chakra-ui/react";
-export const ID = "contact";
 import { useEffect } from "react";
 import { useToast } from "@chakra-ui/react";
 // @ts-ignore
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { contacts } from "@/lib/contact";
-export default function Contact() {
+type PageProp={
+  id:string
+}
+export default function Contact({id}:PageProp) {
   const toast = useToast();
   function onToast() {
     toast({
@@ -39,7 +41,7 @@ export default function Contact() {
     AOS.init({ duration: 1200 });
   }, []);
   return (
-    <main id={ID}  className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
+    <main  className=" text-md grid place-items-center bg-black/95 py-10 text-slate-100">
       <div data-aos="zoom-in-up" className=" mx-auto w-[90%] lg:w-[70%]">
         <p className="relative mx-auto w-fit border-b py-4 text-center text-4xl font-[700] text-emerald-300">
           {contacts.contact}

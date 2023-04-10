@@ -21,7 +21,7 @@ export default function ScrollToTopButton() {
 
     useEffect(() => {
         return scrollYProgress.on('change', (latestValue) => {
-            if (latestValue > 0.5) {
+            if (latestValue > 0.6) {
                 controls.start('show');
             } else {
                 controls.start('hide');
@@ -31,7 +31,7 @@ export default function ScrollToTopButton() {
 
     return (
         <motion.button
-            className="fixed bottom-2 right-2 text-slate-50 p-5 rounded-full bg-blue-600"
+            className="fixed bottom-2 right-2 text-slate-50 p-3 rounded-full bg-blue-600"
             variants={ScrollToTopContainerVariants}
             initial="hide"
             animate={controls}

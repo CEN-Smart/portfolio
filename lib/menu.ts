@@ -3,10 +3,10 @@ import {BiBookContent, BiHome, BiUser, BiFileBlank, BiServer, BiEnvelope} from '
 import { IconType} from 'react-icons';
 type Menu = { name: string, link: string, icon:IconType }[];
 export const menu:Menu=[
-    { name: 'Home', link: '/#',icon:BiHome },
-    { name: 'About', link: '/#about',icon:BiUser },
-    { name: 'Resume', link: '/#resume',icon:BiFileBlank },
-    { name: 'Portfolio', link: '/#portfolio' ,icon:BiBookContent},
-    { name: 'Services', link: '/#services',icon:BiServer },
-    { name: 'Contact', link: '/#contact',icon:BiEnvelope },
+    { name: 'Home', link: '',icon:BiHome },
+    { name: 'About', link: '',icon:BiUser },
+    { name: 'Resume', link: '',icon:BiFileBlank },
+    { name: 'Portfolio', link: '' ,icon:BiBookContent},
+    { name: 'Services', link: '',icon:BiServer },
+    { name: 'Contact', link: '',icon:BiEnvelope },
 ]
